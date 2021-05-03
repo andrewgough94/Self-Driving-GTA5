@@ -13,8 +13,6 @@ def process_img(original_image):
     processed_img = cv2.Canny(processed_img, threshold1=200, threshold2=300)
     return processed_img
 
-
-print("hey")
 last_time = time.time()
 while(True):
     screen = np.array(ImageGrab.grab(bbox=(0,40,800,640)))
@@ -25,7 +23,3 @@ while(True):
     if cv2.waitKey(25) & 0xFF == ord('q'):
         cv2.destroyAllWindows()
         break
-
-print("hi")
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
