@@ -2,6 +2,7 @@ import numpy as np
 from PIL import ImageGrab
 import cv2
 import time
+import sys
 
 def roi(img, vertices):
     # Empty mask of size image
@@ -20,6 +21,15 @@ def process_img(original_image):
     processed_img = roi(processed_img, [vertices])
     return processed_img
 
+# Let's know how big each frame is
+def get_screen_data(img):
+    # processing img is now a numpy ndarray
+    shape = img.shape
+    size = img.size
+    print(shape, size)
+
+    memory_size = sys.getsizeof(img)
+    print('array size in bytes = ', memory_size)
 
 def main():
     print('andrew')
@@ -28,6 +38,7 @@ def main():
     while(True):
         screen = np.array(ImageGrab.grab(bbox=(0,40, 800, 640)))
         new_screen = process_img(screen)
+        get_screen_data(new_screen)
         print('Loop took {} seconds'.format(time.time()-last_time))
         last_time = time.time()
         cv2.imshow('window', new_screen)

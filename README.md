@@ -13,7 +13,11 @@ https://docs.anaconda.com/anaconda/user-guide/tasks/pycharm/
 
 Project Settings, add python interpreter, from existing conda environment
 
+## Frame size
 
+With region of interest
+(600, 800) 480000
+array size in bytes =  480112
 
 ## Fun Experiments
 
