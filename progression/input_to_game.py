@@ -2,17 +2,12 @@ import numpy as np
 from PIL import ImageGrab
 import cv2
 import time
-from directkeys import PressKey, W, A, S, D
+from directkeys import PressKey, ReleaseKey, W, A, S, D
 
+# 4 second countdown before image capture / action selection
 for i in list(range(4))[::-1]:
     print(i+1)
     time.sleep(1)
-
-print('down')
-PressKey(W)
-time.sleep(3)
-print('up')
-PressKey(W)
 
 # Defined in part 2
 def process_img(original_image):
@@ -26,6 +21,14 @@ last_time = time.time()
 while(True):
     screen = np.array(ImageGrab.grab(bbox=(0,40,800,640)))
     new_screen = process_img(screen)
+
+    # Press forward down for 3 seconds at a time
+    print('down')
+    PressKey(W)
+    time.sleep(3)
+    print('up')
+    ReleaseKey(W)
+
     print("Loop took {} seconds".format(time.time()-last_time))
     last_time = time.time()
     cv2.imshow('window', new_screen)
