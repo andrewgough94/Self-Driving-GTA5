@@ -1,7 +1,7 @@
 # This is a sample Python script.
 
 import numpy as np
-from PIL import Image, ImageGrab
+from PIL import ImageGrab
 import cv2
 import time
 
