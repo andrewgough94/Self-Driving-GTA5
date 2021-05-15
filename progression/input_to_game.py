@@ -2,7 +2,17 @@ import numpy as np
 from PIL import ImageGrab
 import cv2
 import time
-from directkeys import PressKey,
+from directkeys import PressKey, W, A, S, D
+
+for i in list(range(4))[::-1]:
+    print(i+1)
+    time.sleep(1)
+
+print('down')
+PressKey(W)
+time.sleep(3)
+print('up')
+PressKey(W)
 
 # Defined in part 2
 def process_img(original_image):
