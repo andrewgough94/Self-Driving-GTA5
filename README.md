@@ -8,7 +8,13 @@ Different versions of the self-driving agent will live under the
 2 - input_to_game.py
 
 
+## Adding dependencies / Environment Mgmt
+https://docs.anaconda.com/anaconda/user-guide/tasks/pycharm/
 
-*Fun Experiments*
+Project Settings, add python interpreter, from existing conda environment
+
+
+
+## Fun Experiments
 
 Apply to rocket league, halo
