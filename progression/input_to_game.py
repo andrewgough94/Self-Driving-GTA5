@@ -1,9 +1,8 @@
-# This is a sample Python script.
-
 import numpy as np
 from PIL import ImageGrab
 import cv2
 import time
+from directkeys import PressKey,
 
 # Defined in part 2
 def process_img(original_image):
