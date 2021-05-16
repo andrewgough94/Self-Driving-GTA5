@@ -15,6 +15,10 @@ Project Settings, add python interpreter, from existing conda environment
 
 ## Frame size
 
+Raw screen from image grab as numpy array
+(600, 800, 3) 1440000
+array size in bytes =  1440128
+
 With region of interest
 (600, 800) 480000
 array size in bytes =  480112
