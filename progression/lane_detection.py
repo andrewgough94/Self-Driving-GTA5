@@ -37,7 +37,7 @@ def process_img(original_image):
     # this takes processed images (canny output) sends in edges, detects lines
     # Hough inputs - minLineLength, minGap
     # returns array of arrays that contain the lines
-    lines = cv2.HoughLinesP(processed_img, 1, np.pi/180, 180, 20, 15)
+    lines = cv2.HoughLinesP(processed_img, 1, np.pi/180, 180, np.array([]), 100, 5)
 
     draw_lines(processed_img, lines)
 

@@ -2,7 +2,7 @@ import numpy as np
 from PIL import ImageGrab
 import cv2
 import time
-from directkeys import PressKey, ReleaseKey, W, A, S, D
+from progression.utils.directkeys import PressKey, ReleaseKey, W
 
 # 4 second countdown before image capture / action selection
 for i in list(range(4))[::-1]:
