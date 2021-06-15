@@ -1,9 +1,11 @@
 # This is a sample Python script.
 
+import time
+
+import cv2
 import numpy as np
 from PIL import ImageGrab
-import cv2
-import time
+
 
 # Defined in part 2
 def process_img(original_image):

@@ -1,8 +1,10 @@
+import sys
+import time
+
+import cv2
 import numpy as np
 from PIL import ImageGrab
-import cv2
-import time
-import sys
+
 
 def roi(img, vertices):
     # Empty mask of size image

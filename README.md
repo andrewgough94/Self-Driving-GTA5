@@ -21,8 +21,8 @@ array size in bytes =  1440128
 
 With region of interest
 (600, 800) 480000
-array size in bytes =  480112
+array size in bytes =  480112, 480 KB, .48 MB
 
 ## Fun Experiments
 
-Apply to rocket league, halo
+Apply to rocket league, halo, valheim (tree identification+chop)
