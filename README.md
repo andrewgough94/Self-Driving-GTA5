@@ -7,7 +7,9 @@ Different versions of the self-driving agent will live under the
 
 2 - input_to_game.py 
 
-3? - Lane detection 
+3? - Line detection Hough lines
+
+4? - Lane detection 
 
 
 ## Adding dependencies / Environment Mgmt
