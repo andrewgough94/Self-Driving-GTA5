@@ -3,9 +3,11 @@
 Different versions of the self-driving agent will live under the 
 `/progression/` folder 
 
-1 - openCV_grayScale_edgeDetection.py 
+1 - openCV_grayScale_edgeDetection.py - applies gray scale and detects / draws edges
 
-2 - input_to_game.py
+2 - input_to_game.py 
+
+3? - Lane detection 
 
 
 ## Adding dependencies / Environment Mgmt
