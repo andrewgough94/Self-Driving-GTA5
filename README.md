@@ -10,7 +10,8 @@ Different versions of the self-driving agent will live under the
 3 - region_of_interest.py - draws a polygon ROI through implementing roi() to mask our image, now with the ROI applied, we won't detect poles or wires, letting us focus on the road ahead while also minimizing the image further 
 [download.png]
 
-4 - Line detection Hough lines - draws lines detected using the Hough Line Transformation algorithm - https://docs.opencv.org/3.0-beta/doc/py_tutorials/py_imgproc/py_houghlines/py_houghlines.html
+4 - Line detection Hough lines - draws lines detected using the Hough Line Transformation algorithm - https://docs.opencv.org/3.0-beta/doc/py_tutorials/py_imgproc/py_houghlines/py_houghlines.html 
+also smoothing the image to help detect stronger lines using cv2.GaussianBlur (https://docs.opencv.org/4.5.2/d4/d86/group__imgproc__filter.html#gaabe8c836e97159a9193fb0b11ac52cf1)
 
 4? - Lane detection 
 
