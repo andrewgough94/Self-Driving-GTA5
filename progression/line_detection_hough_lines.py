@@ -44,9 +44,7 @@ def process_img(original_image):
 
     return processed_img
 
-# Let's know how big each frame is
 def get_screen_data(img):
-    # processing img is now a numpy ndarray
     shape = img.shape
     size = img.size
     print(shape, size)
