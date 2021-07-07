@@ -17,15 +17,31 @@ https://docs.anaconda.com/anaconda/user-guide/tasks/pycharm/
 
 Project Settings, add python interpreter, from existing conda environment
 
-## Frame size
+## Frame size and data considerations
 
 Raw screen from image grab as numpy array
-(600, 800, 3) 1440000
-array size in bytes =  1440128
+(800, 600, 3) 1,440,000
+array size in bytes =  1,440,128 = 1.4MB per un-processed frame
+
+Gray scaling helps simplify things (by reducing our image to one value vs. RGB's 3 values per pixel) resulting in 
+(800, 600, 1) 480,000
+array size in bytes = 480KB per gray-scaled frame
 
 With region of interest
-(600, 800) 480000
+(800, 600) 480000
 array size in bytes =  480112, 480 KB, .48 MB
+
+### To put this into perspective
+1 black-white pixel contains 8 bits (2^8, 256 possible values)
+1 RBG pixel contains 24 bits (2^24, 16777216 possible values)
+
+4k displays represent a horizontal resolution of 4k pixels
+Majority of 4k displays come with a (Ultra-HDTV) 3840 x 2160 pixel resolution which is 4x the pixel count of full HD displays 1920 x 1080 pixels
+
+4k grayscale = (3840, 2160, 1) = 8,294,400B = 8.2MB per frame
+4k rbg = (3840, 2160, 3) = 24,883,200 = 24.8MB per frame
+
+TODO - Tesla's vehicles contain 12 cameras at (XXX resolution) - capturing X frames per second - recording XXX data per second - this is mind boggling data being generated every second
 
 ## Fun Experiments
 
