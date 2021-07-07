@@ -11,7 +11,7 @@ def roi(img, vertices):
     mask = np.zeros_like(img)
     # Fill mask by vertices at full value of 255
     cv2.fillPoly(mask, vertices, 255)
-    # Apply roi mask to our image and keep that as masked
+    # Apply roi mask to our image only show that area
     masked = cv2.bitwise_and(img, mask)
     return masked
 
