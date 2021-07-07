@@ -16,9 +16,9 @@ def process_img(original_image):
     return processed_img
 
 
-print("hey")
 last_time = time.time()
 while(True):
+    # 800x600 windowed mode
     screen = np.array(ImageGrab.grab(bbox=(0,40,800,640)))
     new_screen = process_img(screen)
     print("Loop took {} seconds".format(time.time()-last_time))
@@ -27,7 +27,5 @@ while(True):
     if cv2.waitKey(25) & 0xFF == ord('q'):
         cv2.destroyAllWindows()
         break
-
-print("hi")
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
