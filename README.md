@@ -13,7 +13,7 @@ Different versions of the self-driving agent will live under the
 4 - Line detection Hough lines - draws lines detected using the Hough Line Transformation algorithm - https://docs.opencv.org/3.0-beta/doc/py_tutorials/py_imgproc/py_houghlines/py_houghlines.html 
 also smoothing the image to help detect stronger lines using cv2.GaussianBlur (https://docs.opencv.org/4.5.2/d4/d86/group__imgproc__filter.html#gaabe8c836e97159a9193fb0b11ac52cf1)
 
-4? - Lane detection 
+5 - Lane detection - identifies 2 longest lines on image with the same slope (from base of screen to longest Y points on the horizon) and draws them over the image
 
 
 ## Adding dependencies / Environment Mgmt

@@ -33,7 +33,7 @@ def process_img(image):
 
     # more info: http://docs.opencv.org/3.0-beta/doc/py_tutorials/py_imgproc/py_houghlines/py_houghlines.html
     #                                     rho   theta   thresh  min length, max gap:
-    lines = cv2.HoughLinesP(processed_img, 1, np.pi / 180, 180, 20, 15)
+    lines = cv2.HoughLinesP(processed_img, 1, np.pi/180, 180, np.array([]), 100, 5)
     try:
         l1, l2 = DrawLanes(original_image, lines)
         cv2.line(original_image, (l1[0], l1[1]), (l1[2], l1[3]), [0, 255, 0], 30)
@@ -55,7 +55,6 @@ def process_img(image):
 
     return processed_img, original_image
 
-# Let's know how big each frame is
 def get_screen_data(img):
     # processing img is now a numpy ndarray
     shape = img.shape
@@ -74,6 +73,7 @@ def main():
         #get_screen_data(screen)
         #print('Loop took {} seconds'.format(time.time()-last_time))
         last_time = time.time()
+        # Below will render two windows, the processed 
         cv2.imshow('window', new_screen)
         cv2.imshow('window2', cv2.cvtColor(original_image, cv2.COLOR_BGR2RGB))
         #cv2.imshow('window2', cv2.cvtColor(screen, cv2.COLOR_BGR2RGB))
