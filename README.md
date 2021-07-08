@@ -15,6 +15,7 @@ also smoothing the image to help detect stronger lines using cv2.GaussianBlur (h
 
 5 - Lane detection - identifies 2 longest lines on image with the same slope (from base of screen to longest Y points on the horizon) and draws them over the image
 
+6 - Semi-intelligent self-driving car, simple logic to turn based on lane position (self_driving.py) 
 
 ## Adding dependencies / Environment Mgmt
 https://docs.anaconda.com/anaconda/user-guide/tasks/pycharm/
